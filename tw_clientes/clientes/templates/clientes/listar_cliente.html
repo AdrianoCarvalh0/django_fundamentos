@@ -1,0 +1,22 @@
+{% extends "clientes/base.html" %}
+{% block titulo %}
+Listagem do cliente
+{% endblock titulo %}
+
+{% block conteudo %}
+
+<div class="card" >
+<!--        <img class="card-img-top" src="..." alt="Card image cap">-->
+    <div class="card-body">
+        <h5 class="card-title">Dados do cliente</h5>
+        <p class="card-text">Nome: {{ cliente.nome }}.</p>
+        <p class="card-text"><b>Sexo:</b> {{ cliente.sexo }}.</p>
+        <p class="card-text">Email: {{ cliente.email }}.</p>
+        <p class="card-text">Data de nascimento: {{ cliente.data_nascimento }}.</p>
+        <p class="card-text">Profissão: {{ cliente.profissao }}.</p>
+
+       <a href="{% url 'listar_clientes' %}" class="btn btn-primary">Página de listagem de clientes</a
+    </div>
+</div>
+
+{% endblock conteudo %}
