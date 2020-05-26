@@ -1,5 +1,5 @@
 from django import forms
-from .models import Cliente
+from .models import Cliente,Endereco
 
 class ClientForm(forms.ModelForm):
     # alterando um valor de um campo dos fields recebidos
@@ -9,3 +9,7 @@ class ClientForm(forms.ModelForm):
         model = Cliente
         fields = ['nome','sexo','email','profissao','data_nascimento']
 
+class EnderecoForm(forms.ModelForm):
+    class Meta:
+        model = Endereco
+        fields = ['rua', 'numero','complemento','bairro','cidade','estado','pais']

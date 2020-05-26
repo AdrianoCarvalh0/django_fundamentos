@@ -1,47 +1,20 @@
 {% extends "clientes/base.html" %}
-<!--{% load meus_filtros %}-->
+{% load meus_filtros %}
 {% block title %}
-Cadastrar Clientes
+Cadastrar Endereco
 {% endblock title %}
 
 {% block content %}
 <!--Porque o Django precisa validar que aquele formulário está, realmente, sendo enviado por uma aplicação conhecida. Motivo de se usar o csrf_token-->
     <form method="post">
         {% csrf_token %}
-
-        {{ form_cliente.as_p }}
-<!--        <div class="form-group">-->
-<!--            {{ form_cliente.nome.errors }}-->
-<!--            <label>Nome: </label>-->
-<!--            {{ form_cliente.nome| addclass:'form-control' }}-->
-<!--        </div>-->
-<!--        <div class="form-group">-->
-<!--            {{ form_cliente.sexo.errors }}-->
-<!--            <label>Sexo: </label>-->
-<!--            {{ form_cliente.sexo| addclass:'form-control' }}-->
-<!--        </div>-->
-<!--        <div class="form-group">-->
-<!--            {{ form_cliente.profissao.errors }}-->
-<!--            <label>Profissão: </label>-->
-<!--            {{ form_cliente.profissao | addclass:'form-control'}}-->
-<!--        </div>-->
-<!--         <div class="form-group">-->
-<!--             {{ form_cliente.data_nascimento.errors }}-->
-<!--            <label>Data de Nascimento: </label>-->
-<!--            {{ form_cliente.data_nascimento | addclass:'form-control'}}-->
-<!--             </div>-->
-<!--         <div class="form-group">-->
-<!--             {{ form_cliente.email.errors }}-->
-<!--            <label>Email: </label>-->
-<!--            {{ form_cliente.email | addclass:'form-control'}}-->
-<!--             </div>-->
-<!--        <hr>-->
-<!--        <h4>Endereço: </h4>-->
-
+        <hr>
+        <h4>Endereço: </h4>
+        {{ form_endereco.as_p }}
 <!--        <div class="form-group">-->
 <!--            {{ form_endereco.rua.errors }}-->
 <!--            <label>Rua: </label>-->
-<!--            {{ form_endereco. | addclass:'form-control'}}-->
+<!--            {{ form_endereco.rua | addclass:'form-control'}}-->
 <!--        </div>-->
 <!--        <div class="form-group">-->
 <!--            {{ form_endereco.numero.errors }}-->
@@ -74,9 +47,8 @@ Cadastrar Clientes
 <!--            <label>País: </label>-->
 <!--            {{ form_endereco.pais | addclass:'form-control'}}-->
 <!--        </div>-->
-        {{ form_endereco.as_p }}
         <div class="form-group">
             <input type="submit" name="Cadastrar">
         </div>
-   </form>
+<!--    </form>-->
 {% endblock content %}

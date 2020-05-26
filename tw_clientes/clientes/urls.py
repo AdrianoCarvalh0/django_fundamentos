@@ -7,6 +7,7 @@ urlpatterns = [
     path('cadastrar', inserir_cliente, name='cadastrar_cliente'),
     path('listar/<int:id>',listar_cliente_id, name = 'listar_cliente_id'),
     path('editar/<int:id>', editar_cliente, name='editar_cliente'),
-    path('remover/<int:id>', remover_cliente, name='remover_cliente')
-
+    path('remover/<int:id>', remover_cliente, name='remover_cliente'),
+    path('cadastrar/endereco', inserir_endereco, name='cadastrar_endereco'),
+    path('listar/endereco', listar_enderecos, name='listar_enderecos')
 ]
